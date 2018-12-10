@@ -6,7 +6,7 @@ First attempt into Kaggle.
 The training dataset consists of only 137 entries with 37 columns of obfuscated 
 data with not apparent missing numbers. It is crucial to avoid overfitting with
 such a poor amount of data. We are not given any explanation of whether they are 
-numerical or categorical. Besides, we hace the opening date, city name, city group,
+numerical or categorical. Besides, we have the opening date, city name, city group,
 and restaurant type.
 
 The basic approach has been correcting positive skews taking log1p; transforming
@@ -18,5 +18,5 @@ gridsearch. In the linear regressions, we removed coefficients such that
 |coefficient| < 0.25, in order to avoid overfitting.
 
 Finally, we combined three different linear regressions, obtained with CV with
-n=3,4, and 5, and three gradien boosted regressions, obtained in the same way.
-The combination was naive (average), but fancier strategies could be tried.
+n=3,4, and 5, and three gradient boosted regressions, obtained in the same way.
+The combination was naive (average), but fancier strategies could have been tried.
